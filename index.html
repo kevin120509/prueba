@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth bg-zinc-950">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rivas Barber Studio | Reservas</title>
+    <meta name="description" content="Agenda tu cita en Rivas Barber Studio. Servicios de corte, barba y faciales en Mérida, Yucatán.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #09090b; color: #f4f4f5; margin: 0; padding: 0; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .nav-link {
+            position: relative;
+        }
+        .nav-link.active {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+        }
+
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+            border-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(39, 39, 42, 0.7);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.5rem;
+        }
+        @media (min-width: 640px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-zinc-700 selection:text-white">
+
+    <!-- Pantalla completa (full screen) usando min-h-screen y Flex -->
+    <div class="flex flex-col md:flex-row w-full min-h-screen bg-[#121214]">
+        
+        <!-- LEFT COLUMN (Profile / Info) - Pegajoso en Desktop -->
+        <div class="w-full md:w-[35%] lg:w-[30%] bg-[#18181b] border-b md:border-b-0 md:border-r border-white/5 flex flex-col z-20 md:sticky md:top-0 md:h-screen">
+            
+            <!-- Contenedor scrolleable interno solo para la barra lateral si la pantalla es muy pequeña -->
+            <div class="flex-1 overflow-y-auto hide-scrollbar flex flex-col">
+                <!-- Cover Image -->
+                <div class="h-44 md:h-52 relative w-full bg-zinc-900 shrink-0 group overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx54aRJgk-PdIAA4AzzptxOgHA08wMw1rHsPH6j8MKT9_xtW7EKTnIWaHrWqhDFuCjHKMSv4O7mFthVHY3kTx1IZ0HBBaG8ZwRIVrpyQRwVtN-3-SHvkVxxZxfd3MYS6ycyhI2NbN-9pvVZsfe3EbMUKoRUlo0pXwB1CGVqs8wCoP4KgV469NwzTnRgYJW-tojYr9A3n3XnWK9oy9EJwB5CpXzdGzqvUxx32daDH3KL6Pc6W-Oi2PFzi9opG91ZJ67Sh8UM_YECg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-luminosity">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#18181b] via-transparent to-transparent"></div>
+                </div>
+
+                <!-- Profile Header Details -->
+                <div class="px-6 pb-6 relative flex-col flex shrink-0">
+                    <!-- Avatar -->
+                    <div class="w-[104px] h-[104px] rounded-full border-4 border-[#18181b] overflow-hidden shadow-2xl -mt-[52px] mb-3 bg-zinc-800 relative z-10 shrink-0">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJeUyT8SjDc2QrrmMDRE12W42VZa8p1hF7R8-fPtPsG2wvToq6XbpzFdRZwfbUXQxNIdYtAmvDa3oRhHphYyoz5Ln_BXoZrX46FC5pt4VO0NC3g1W7Sb9ulT1_N_B62hqLhce-lTGHOBSgDRxP8xkhcMJt5iVQj8JT-BKmrClMz-ymZhBZuh23hIhhq97BcAI4xBkrYwtA6CZG13OKmX1QxJiGMPPTQuXBVqru8IDl1Hn5zdHH25HYJrlVEBtkVzHgbBgOB0rVQ" class="w-full h-full object-cover">
+                    </div>
+
+                    <h1 class="text-2xl font-extrabold tracking-tight text-white leading-tight">Rivas Barber Studio</h1>
+                    
+                    <a href="https://www.google.com/maps/search/?api=1&query=445+Calle+44%2C+M%C3%A9rida%2C+Yucat%C3%A1n%2C+97138" target="_blank" class="text-[13px] font-medium text-zinc-400 mt-1.5 flex items-center gap-1.5 hover:text-white transition-colors inline-flex w-fit">
+                        <span class="material-symbols-outlined text-[16px]">location_on</span>
+                        445 Calle 44, Mérida, Yuc.
+                    </a>
+                    
+                    <div class="flex items-center gap-2 mt-4 cursor-pointer group w-max">
+                        <div class="flex text-amber-500">
+                            <span class="material-symbols-outlined fill-current text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined fill-current text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <span class="text-sm font-semibold text-zinc-300 group-hover:text-white transition-colors">5.0 (56)</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex gap-2.5 mt-5">
+                        <a href="#" id="btnSidebarWhatsApp" class="flex-1 bg-white text-black rounded-[14px] py-2.5 text-[14px] font-bold flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all active:scale-[0.97] shadow-[0_0_15px_rgba(255,255,255,0.15)]">
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">add</span>
+                            Reservar
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=445+Calle+44%2C+M%C3%A9rida%2C+Yucat%C3%A1n%2C+97138" target="_blank" class="w-11 h-11 bg-zinc-800 text-white rounded-[14px] flex items-center justify-center hover:bg-zinc-700 transition-colors active:scale-[0.97] border border-white/10">
+                            <span class="material-symbols-outlined text-[20px]">directions</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <hr class="border-white/5 mx-6">
+
+                <!-- Contact & Info -->
+                <div class="px-6 py-6 space-y-5 shrink-0 text-sm">
+                    
+                    <div class="flex items-start gap-3.5">
+                        <div class="mt-0.5 text-zinc-500"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">schedule</span></div>
+                        <div class="flex-1">
+                            <p class="font-semibold text-white">Horario de atención</p>
+                            <p class="text-zinc-400 mt-0.5 leading-snug">Lun - Sáb, 9:00 AM - 8:00 PM<br>Domingo Cerrado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3.5">
+                        <div class="text-zinc-500"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span></div>
+                        <div class="flex-1">
+                            <a href="tel:9994978293" class="font-semibold text-white hover:text-amber-500 transition-colors inline-block text-[15px]">999 497 8293</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3.5">
+                        <div class="text-zinc-500"><span class="material-symbols-outlined text-[20px]">mail</span></div>
+                        <div class="flex-1 w-full overflow-hidden">
+                            <a href="mailto:alejandrorivh@gmail.com" class="font-medium text-zinc-400 hover:text-white transition-colors inline-block truncate w-full text-[14px]">alejandrorivh@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN (Content View) -->
+        <div class="w-full md:w-[65%] lg:w-[70%] bg-[#121214] flex flex-col relative">
+            
+            <!-- Navbar Sticky -->
+            <nav class="sticky top-0 bg-[#121214]/85 backdrop-blur-xl border-b border-white/10 z-30 px-2 sm:px-6 w-full overflow-x-auto hide-scrollbar shadow-lg">
+                <ul class="flex whitespace-nowrap px-2" id="tab-nav">
+                    <li><a href="#servicios" class="nav-link active px-4 py-4 block text-[14px] font-medium text-zinc-400 hover:text-white transition-colors">Servicios</a></li>
+                    <li><a href="#equipo" class="nav-link px-4 py-4 block text-[14px] font-medium text-zinc-400 hover:text-white transition-colors">Equipo</a></li>
+                    <li><a href="#galeria" class="nav-link px-4 py-4 block text-[14px] font-medium text-zinc-400 hover:text-white transition-colors">Galería</a></li>
+                    <li><a href="#resenas" class="nav-link px-4 py-4 block text-[14px] font-medium text-zinc-400 hover:text-white transition-colors">Reseñas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Scrollable Content Area: now naturally expands -> body takes care of scrolling -->
+            <div class="w-full px-5 sm:px-8 lg:px-16 py-8 space-y-16 section-container relative pb-32">
+                
+                <!-- Servicios Section -->
+                <section id="servicios" class="scroll-mt-24">
+                    <h2 class="text-[22px] font-extrabold text-white mb-5 tracking-tight flex items-center gap-2">
+                        <span>Menú de Servicios</span>
+                    </h2>
+                    
+                    <div class="grid gap-3">
+                        <!-- Servicio 1 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Corte y barba + Facial">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Corte y barba + Facial</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Premium</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+
+                        <!-- Servicio 2 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Barba + facial">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Barba + facial</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Premium</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+
+                        <!-- Servicio 3 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Corte + facial">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Corte + facial</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Premium</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+
+                        <!-- Servicio 4 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Corte y barba">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Corte y barba</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Estándar</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+
+                        <!-- Servicio 5 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Corte de cabello">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Corte de cabello</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Básico</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+
+                        <!-- Servicio 6 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Barba">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Barba</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Básico</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+
+                        <!-- Servicio 7 -->
+                        <div class="service-card bg-zinc-900/40 p-4 sm:p-5 rounded-2xl border border-white/5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 cursor-pointer btn-reservar group" data-service="Arreglo/delineado de cejas">
+                            <div>
+                                <h3 class="font-bold text-white text-[16px] group-hover:text-amber-500 transition-colors">Arreglo/delineado de cejas</h3>
+                                <p class="text-[13px] text-zinc-400 mt-1 font-medium flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">schedule</span> Básico</p>
+                            </div>
+                            <button class="w-full sm:w-auto px-5 py-2.5 bg-zinc-800 text-white group-hover:bg-white group-hover:text-black font-semibold text-[13px] rounded-xl transition-all shadow-sm border border-white/10 group-hover:border-white">Reservar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Equipo Section -->
+                <section id="equipo" class="scroll-mt-24">
+                    <h2 class="text-[22px] font-extrabold text-white mb-5 tracking-tight flex items-center gap-2">
+                        <span>Nuestro Equipo</span>
+                    </h2>
+                    <div class="flex gap-4">
+                        <div class="bg-zinc-900/40 p-4 rounded-2xl border border-white/5 w-full sm:w-64 text-center cursor-pointer hover:border-white/20 transition-colors">
+                            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden bg-zinc-800 mb-3 border-2 border-zinc-700">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYI6KqcAanth9ASGCy6VbaGjrx92qxgQyb6_kyFKYRgYHEpGNr3OcErfxNs3FmTPpQHxYKSUbq0rxyFdqdEzvwhXxfndLBfT0AVSJtvHRO-P4mXmr9O0uSoYuSYDpLhKvX2cwmGPRziJPGA4kgMqYaDedU27YHvMOQGQsXTUgkQXWghYwqrcYYCnPAIWZ70ophw45Bfo2eDK2mgtj6MJWJqGQhnrjANxIYF-dNHbmsMOfsD4ao94adAZUnS0vGutlHedRz78aGIg" class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                            </div>
+                            <h4 class="font-bold text-white">Alejandro Rivas</h4>
+                            <p class="text-[13px] text-zinc-400 mt-0.5">Master Barber</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Galería Section -->
+                <section id="galeria" class="scroll-mt-24">
+                    <h2 class="text-[22px] font-extrabold text-white mb-5 tracking-tight flex items-center justify-between">
+                        <span>Línea de Trabajo</span>
+                        <span class="text-[13px] font-medium text-zinc-400 bg-zinc-800 px-3 py-1 rounded-full border border-white/5">Fotos</span>
+                    </h2>
+                    
+                    <div class="gallery-grid">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-zinc-900 group cursor-pointer border border-white/5">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWQVrw1S1M4uzzBACVV3__nBYWoXBcyPXE1N-PAhV0-71jHQ3kFQneHhAlqDMkqpjbugrHoJaXykdV1rJRs36NR7ohab3OrTdiI7kRlEzjOVpONgc08xfGlTZCGDU97oHddVSarEOySPP-chIVpP8HI_JR5z0G-uW-kEFHIJUjt8ZswYOAKzaGRtxq5Wq0thx3AR5_f7PVTbN0aJJFqqboebuY09DVMoMQONXn1idgjh7NpXVF_PZrejRIbjx0hqD_qd4RjP3tkQ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-zinc-900 group cursor-pointer border border-white/5">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClO_Rjvct7kgSFSUvY5ckserWKwY4fU6UO9Yeke9yX-Nswm_vZvyiSBbz3XLMkUlbyaA5-lRZA0_HgExUHCJ1Cb8rvj9ikbd6oc5mpnEVdrBvLD2L_aCEKWp2RWpBI1HzFyejH6TAjE3NWCHdhcwOiPVQomnS4X2AkSLve8C4MJrZIt0C93GMUlSzX4ObQDbazOGzLBUPDuLopR8IxWbI2YtxM9bEoiBH1IdQOndbjEkC50YvT_3hIpioUO0bHnJ9N0wXWO9hheQ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-zinc-900 group cursor-pointer border border-white/5">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEGNW-ESWKV2dSnHxXUy93MIwWV39ugEn3gHQBAmY-PtUUWIYdM7O8vNWJ3GKcu5uefTdUWnWX2gfPSIawRZ4JrdNLR3VItXgcnxfTldmTcgScFfRdP-q5eYpvSF9WWjKl3n3b4yzGzHg-0pfvRHJ_8YeW1EOOzX052eUEWPlhLwDe2-2-ozr29tXS_6jNDoH5Gjpi3dazADNEKEEEVGw12XIJXIznTk68pL0sV46ADrC2ZZqY0L6S9mmoUqbXK9BOkdtxhw27IA" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reseñas Section -->
+                <section id="resenas" class="scroll-mt-24 pb-8 border-b-0">
+                    <div class="flex items-end justify-between mb-6">
+                        <h2 class="text-[22px] font-extrabold text-white tracking-tight flex items-center gap-2">
+                            <span>Reseñas</span>
+                        </h2>
+                        <div class="flex items-center gap-1.5 bg-amber-500/10 text-amber-500 px-3 py-1 rounded-full border border-amber-500/20">
+                            <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="font-bold text-[13px]">5.0 de 56</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Reseña 1 -->
+                        <div class="bg-zinc-900/40 p-5 rounded-2xl border border-white/5">
+                            <div class="flex items-center justify-between mb-2">
+                                <p class="font-bold text-white text-[14px]">Javier Alberto Ramirez</p>
+                                <div class="flex text-amber-500">
+                                    <span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                            <p class="text-[14px] text-zinc-400 leading-relaxed">"Excelente servicio, siempre entiende las ideas que llevo y hace buenas recomendaciones. Recomendado cien por ciento."</p>
+                        </div>
+
+                        <!-- Reseña 2 -->
+                        <div class="bg-zinc-900/40 p-5 rounded-2xl border border-white/5">
+                            <div class="flex items-center justify-between mb-2">
+                                <p class="font-bold text-white text-[14px]">DRAGOn M.</p>
+                                <div class="flex text-amber-500">
+                                    <span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                            <p class="text-[14px] text-zinc-400 leading-relaxed">"Exelente corte y buena onda el barbero 🔥🔥🔥 Un lugar al que da gusto regresar."</p>
+                        </div>
+
+                        <!-- Reseña 3 -->
+                        <div class="bg-zinc-900/40 p-5 rounded-2xl border border-white/5">
+                            <div class="flex items-center justify-between mb-2">
+                                <p class="font-bold text-white text-[14px]">Michel Herrera</p>
+                                <div class="flex text-amber-500">
+                                    <span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined fill-current text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                            </div>
+                            <p class="text-[14px] text-zinc-400 leading-relaxed">"Excelente servicio siempre que voy nos dan un excelente trato a la familia y a mí."</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== JS for Scroll spy & WhatsApp Booking ===== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // ===== Scroll Spy for Navigation =====
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('#tab-nav .nav-link');
+
+            // Set root to null so it watches the whole document body scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '-80px 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove active class from all
+                        navLinks.forEach(link => {
+                            link.classList.remove('active', 'text-white');
+                            link.classList.add('text-zinc-400');
+                        });
+                        
+                        // Add active class to intersecting section's link
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`#tab-nav .nav-link[href="#${id}"]`);
+                        if(activeLink) {
+                            activeLink.classList.remove('text-zinc-400');
+                            activeLink.classList.add('active', 'text-white');
+                            activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(sec => observer.observe(sec));
+
+            // Smooth scrolling on nav click using native coordinates
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetEl = document.getElementById(targetId);
+                    
+                    if (targetEl) {
+                        // Calc sticky nav height
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const targetPosition = targetEl.getBoundingClientRect().top + window.scrollY - navHeight - 10;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ===== WhatsApp Booking Logic =====
+            const WHATSAPP_NUMBER = '529994978293';
+            const BASE_MESSAGE = `¡Hola! 👋 Me gustaría agendar una cita en *Rivas Barber Studio*.`;
+
+            function buildWhatsAppURL(servicio) {
+                let mensaje = BASE_MESSAGE;
+                if (servicio) {
+                    mensaje += `\n\n✂️ *Servicio seleccionado:* ${servicio}`;
+                }
+                mensaje += `\n\n¿Cuáles son los horarios disponibles para esta semana?`;
+                return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`;
+            }
+
+            // Bind generic "Reservar" on sidebar
+            const btnSidebar = document.getElementById('btnSidebarWhatsApp');
+            if(btnSidebar) {
+                btnSidebar.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.open(buildWhatsAppURL(null), '_blank');
+                });
+            }
+
+            // Bind each service card
+            const serviceCards = document.querySelectorAll('.btn-reservar');
+            serviceCards.forEach(card => {
+                if(card.id !== 'btnSidebarWhatsApp') {
+                    card.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const servicio = card.dataset.service;
+                        const url = buildWhatsAppURL(servicio);
+                        window.open(url, '_blank');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
